@@ -1,0 +1,48 @@
+*wmpycalc.txt* Plugin for calculations and python snippets
+*wmpycalc*
+
+This plugin provides:
+- Select numbers and calculate sum.
+- Select python snippet and execute it
+
+Add the number in the selection or execute the selection as Python and store 
+the result in register 0.
+
+==============================================================================
+
+|wmpycalc-examples|             EXAMPLES
+|wmpycalc-contact|              CONTACT
+
+==============================================================================
+
+EXAMPLES                                                  *wmpycalc-examples*
+
+Select 4*.2 and do :PyCal
+
+Select the column of numbers and do :PyCal >
+	- Description one       +12.38
+	- Description two       +31.54
+	- Description three     -22.23
+	- Description four      +12.00
+
+Select the lines underneath and do :PyCmd >
+	for i in range(4):
+	   print str(i)
+
+==============================================================================
+
+CONTACT                                                   *wmpycalc-contact*
+
+Plugin by Wannes Meert, mailto:wannes.meert@cs.kuleuven.be, 2011.
+
+==============================================================================
+
+LICENSE                                                   *wmpycalc-license*
+
+FreeBDS License
+Copyright (c) 2011, Wannes Meert (KULeuven). All rights reserved.
+
+==============================================================================
+
+vim:tw=78:ts=8:sw=8:ft=help:norl:noet:
+

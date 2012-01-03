@@ -12,6 +12,12 @@
 " - Description four      +12.00
 "
 " Example:
+" - Description one        12.38
+" - Description two        31.54
+" - Description three     -22.23
+" - Description four       12.00
+"
+" Example:
 " Select the lines underneath and do :PyCmd
 " for i in range(4):
 "    print str(i)
@@ -34,9 +40,27 @@ function! PythonCalc()
 python << endpython
 import vim
 expr = vim.eval("expr")
+#print(expr)
+newsignexp = ["\n", "\r", " "]
 ignore = ["\n", "\r"]
-expr = "".join([c for c in expr if c not in ignore])
-result = eval(expr)
+nexpr = ""
+expectsign = True
+foundsign = False
+for c in expr:
+	if c.isdigit() or c == ".":
+		if expectsign and not foundsign:
+			nexpr += "+"
+		expectsign = False
+		foundsign = False
+		nexpr += c
+	else:
+		if c in newsignexp:
+			expectsign = True
+		else:
+			foundsign = True
+		if c not in ignore:
+			nexpr += c
+result = eval(nexpr)
 print expr+" = "+str(result)+" (@0)"
 vim.command('let @0 = "'+str(result)+'"')
 endpython

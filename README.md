@@ -1,6 +1,9 @@
 WMPyCalc
 ========
 
+Add the number in the selection or execute the selection as Python and store 
+the result in register 0.
+
 Examples
 --------
 
