@@ -69,10 +69,11 @@ for c in expr:
 result = eval(nexpr)
 print expr+" = "+str(result)+" (@"+vim.eval("g:WMPyCalc_register")+")"
 vim.command('let @'+vim.eval("g:WMPyCalc_register")+' = "'+str(result)+'"')
+vim.command('let @+ = "'+str(result)+'"')
 endpython
 endfunction
 com! -nargs=0 -range PyCalc :call PythonCalc()
-map <Leader>pc :PyCalc<CR>
+map <Leader>pcc :PyCalc<CR>
 
 
 " Perform arbitrary python command and store the result in register p
@@ -96,5 +97,5 @@ endpython
 	endtry
 endfunction
 com! -nargs=0 -range PyCmd :call PythonCommand()
-map <Leader>pcc :PyCmd<CR>
+map <Leader>pcm :PyCmd<CR>
 
