@@ -23,6 +23,8 @@
 "    print str(i)
 "
 
+let s:PythonRegister="p"
+
 function! WMVisualSelection()
 	try
 		let a_old = @a
@@ -34,7 +36,7 @@ function! WMVisualSelection()
 endfunction
 
 
-" Perform arithmetics through python and stores the result in register 0
+" Perform arithmetics through python and stores the result in register p
 function! PythonCalc()
 	let expr = WMVisualSelection()
 python << endpython
@@ -61,15 +63,15 @@ for c in expr:
 		if c not in ignore:
 			nexpr += c
 result = eval(nexpr)
-print expr+" = "+str(result)+" (@0)"
-vim.command('let @0 = "'+str(result)+'"')
+print expr+" = "+str(result)+" (@"+s:PythonRegister+")"
+vim.command('let @'+vim.eval("s:PythonRegister")+' = "'+str(result)+'"')
 endpython
 endfunction
 com! -nargs=0 -range PyCalc :call PythonCalc()
 map <Leader>pc :PyCalc<CR>
 
 
-" Perform arbitrary python command and store the result in register 0
+" Perform arbitrary python command and store the result in register p
 function! PythonCommand()
 	try
 		let expr = WMVisualSelection()
@@ -78,13 +80,14 @@ function! PythonCommand()
 python << endpython
 import vim
 expr = vim.eval("expr")
+print expr
 exec expr
 #print str(result)+"\n(@0)"
 #vim.command('let @0 = "'+str(result)+'"')
 endpython
 	redir END
-	let @0 = @a
-	echo "Result in register @0"
+	eval("let @" . s:PythonRegister . " = @a")
+	echo "Result in register @" . s:PythonRegister
 	"normal gv
 	"normal "0p
 	finally
