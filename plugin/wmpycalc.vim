@@ -23,7 +23,9 @@
 "    print str(i)
 "
 
-let s:PythonRegister="p"
+"Choose which register the python command gets pasted into
+let s:PythonRegister="0"
+
 
 function! WMVisualSelection()
 	try
@@ -80,13 +82,11 @@ function! PythonCommand()
 python << endpython
 import vim
 expr = vim.eval("expr")
-print expr
 exec expr
-#print str(result)+"\n(@0)"
-#vim.command('let @0 = "'+str(result)+'"')
 endpython
 	redir END
-	eval("let @" . s:PythonRegister . " = @a")
+	echo "let @".s:PythonRegister." = @a"
+	exec ("let @".s:PythonRegister." = @a")
 	echo "Result in register @" . s:PythonRegister
 	"normal gv
 	"normal "0p
