@@ -80,7 +80,7 @@ import vim
 expr = vim.eval("expr")
 exec expr
 #print str(result)+"\n(@0)"
-vim.command('let @0 = "'+str(result)+'"')
+#vim.command('let @0 = "'+str(result)+'"')
 endpython
 	redir END
 	let @0 = @a
