@@ -24,8 +24,8 @@
 "
 
 "Choose which register the python command gets pasted into
-if !exists('g:PythonRegister')
-       let g:PythonRegister = '0'
+if !exists('g:WMPyCalc_register')
+       let g:WMPyCalc_register = '0'
 endif
 
 function! WMVisualSelection()
@@ -66,8 +66,8 @@ for c in expr:
 		if c not in ignore:
 			nexpr += c
 result = eval(nexpr)
-print expr+" = "+str(result)+" (@"+g:PythonRegister+")"
-vim.command('let @'+vim.eval("g:PythonRegister")+' = "'+str(result)+'"')
+print expr+" = "+str(result)+" (@"+vim.eval("g:WMPyCalc_register")+")"
+vim.command('let @'+vim.eval("g:WMPyCalc_register")+' = "'+str(result)+'"')
 endpython
 endfunction
 com! -nargs=0 -range PyCalc :call PythonCalc()
@@ -86,8 +86,8 @@ expr = vim.eval("expr")
 exec expr
 endpython
 	redir END
-	exec ("let @".g:PythonRegister." = @a")
-	echo "Result in register @" . g:PythonRegister
+	exec ("let @".g:WMPyCalc_register." = @a")
+	echo "Result in register @" . g:WMPyCalc_register
 	"normal gv
 	"normal "0p
 	finally

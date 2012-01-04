@@ -25,6 +25,13 @@ Example:
 	for i in range(4):
 	   print str(i)
 
+Settings
+--------
+
+Change the register the result is saved to to @p by adding the following to 
+your .vimrc:
+
+    let g:WMPyCalc_register='p'
 
 Contact
 -------
