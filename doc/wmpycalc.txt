@@ -11,6 +11,7 @@ the result in register 0.
 ==============================================================================
 
 |wmpycalc-examples|             EXAMPLES
+|wmpycalc-settings|             SETTINGS
 |wmpycalc-contact|              CONTACT
 
 ==============================================================================
@@ -31,16 +32,27 @@ Select the lines underneath and do :PyCmd >
 
 ==============================================================================
 
+SETTINGS                                                   *wmpycalc-settings*
+
+*g:WMPyCalc_register*                                        Default: '0'
+
+	Set the register the result is saved into.
+
+==============================================================================
+
 CONTACT                                                   *wmpycalc-contact*
 
-Plugin by Wannes Meert, mailto:wannes.meert@cs.kuleuven.be, 2011.
+Plugin by
+- Wannes Meert, mailto:wannes.meert@cs.kuleuven.be
+- Wim De Smet, mailto:wim.desmet@cs.kuleuven.be
 
 ==============================================================================
 
 LICENSE                                                   *wmpycalc-license*
 
 FreeBDS License
-Copyright (c) 2011, Wannes Meert (KULeuven). All rights reserved.
+Copyright (c) 2011, Wannes Meert and Wim De Smet (KULeuven).
+All rights reserved.
 
 ==============================================================================
 

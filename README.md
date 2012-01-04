@@ -38,11 +38,14 @@ Contact
 
 Wannes Meert  
 <http://people.cs.kuleuven.be/wannes.meert>
+Wim De Smet
+<http://people.cs.kuleuven.be/wim.desmet>
 
 
 License
 -------
 
 FreeBDS License
-Copyright (c) 2011, Wannes Meert (KULeuven). All rights reserved.
+Copyright (c) 2011, Wannes Meert and Wim De Smet (KULeuven).  
+All rights reserved.
 

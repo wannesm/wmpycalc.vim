@@ -1,4 +1,5 @@
 " Author: Wannes Meert
+" Author: Wim De Smet
 " Date: 2011/11/20
 
 " Example:
