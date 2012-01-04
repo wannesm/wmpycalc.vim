@@ -37,8 +37,8 @@ Contact
 -------
 
 Wannes Meert  
-<http://people.cs.kuleuven.be/wannes.meert>
-Wim De Smet
+<http://people.cs.kuleuven.be/wannes.meert>  
+Wim De Smet  
 <http://people.cs.kuleuven.be/wim.desmet>
 
 
