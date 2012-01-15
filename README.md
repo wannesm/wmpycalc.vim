@@ -1,7 +1,7 @@
 WMPyCalc
 ========
 
-Add the number in the selection or execute the selection as Python and store 
+Add the numbers in a selection or execute a selection as Python code and store 
 the result in register 0.
 
 Examples
@@ -13,7 +13,7 @@ Example:
 
 Example:
 
-	Select the column of numbers and do :PyCal
+	Select the column of numbers (<C-v>) and run the command :PyCal
 	- Description one       +12.38
 	- Description two       +31.54
 	- Description three     -22.23
@@ -29,7 +29,7 @@ Settings
 --------
 
 Change the register the result is saved to to @p by adding the following to 
-your .vimrc:
+your `.vimrc`:
 
     let g:WMPyCalc_register='p'
 
@@ -46,6 +46,6 @@ License
 -------
 
 FreeBDS License
-Copyright (c) 2011, Wannes Meert and Wim De Smet (KULeuven).  
+Copyright (c) 2011, Wannes Meert and Wim De Smet (KU Leuven).  
 All rights reserved.
 

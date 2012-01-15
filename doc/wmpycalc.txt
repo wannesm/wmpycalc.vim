@@ -5,14 +5,14 @@ This plugin provides:
 - Select numbers and calculate sum.
 - Select python snippet and execute it
 
-Add the number in the selection or execute the selection as Python and store 
+Add the numbers in a selection or execute a selection as Python code and store 
 the result in register 0.
 
 ==============================================================================
 
-|wmpycalc-examples|             EXAMPLES
-|wmpycalc-settings|             SETTINGS
-|wmpycalc-contact|              CONTACT
+|wmpycalc-examples| . . . . . . EXAMPLES
+|wmpycalc-settings| . . . . . . SETTINGS
+|wmpycalc-contact|  . . . . . . CONTACT
 
 ==============================================================================
 
@@ -51,7 +51,7 @@ Plugin by
 LICENSE                                                   *wmpycalc-license*
 
 FreeBDS License
-Copyright (c) 2011, Wannes Meert and Wim De Smet (KULeuven).
+Copyright (c) 2011, Wannes Meert and Wim De Smet (KU Leuven).
 All rights reserved.
 
 ==============================================================================
