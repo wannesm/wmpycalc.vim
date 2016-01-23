@@ -43,7 +43,7 @@ endfunction
 " Perform arithmetics through python and stores the result in register p
 function! PythonCalc()
 	let expr = WMVisualSelection()
-python << endpython
+python3 << endpython
 import vim
 expr = vim.eval("expr")
 #print(expr)
@@ -67,7 +67,7 @@ for c in expr:
 		if c not in ignore:
 			nexpr += c
 result = eval(nexpr)
-print expr+" = "+str(result)+" (@"+vim.eval("g:WMPyCalc_register")+")"
+print(expr+" = "+str(result)+" (@"+vim.eval("g:WMPyCalc_register")+")")
 vim.command('let @'+vim.eval("g:WMPyCalc_register")+' = "'+str(result)+'"')
 vim.command('let @+ = "'+str(result)+'"')
 endpython
@@ -82,7 +82,7 @@ function! PythonCommand()
 		let expr = WMVisualSelection()
 		let a_old = @a
 		redir @a
-python << endpython
+python3 << endpython
 import vim
 expr = vim.eval("expr")
 exec expr
